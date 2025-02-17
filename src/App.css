@@ -1,0 +1,80 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:#DCD7C9;
+}
+
+.encabezado{
+  background-color:#3F4F44;
+  width: 100%;
+  height: 70px;
+}
+
+.container{
+  display: flex;
+  min-height: 600px;
+  padding: 50px;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.container-list{
+  width: 800px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  padding: 10px 0px 10px 10px;
+  border-radius: .5rem;
+  background-color:white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.container-input input{
+  width: 25px;
+  height: 25px;
+}
+
+.container-div{
+  width: 70%;
+  min-height: 400px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  background-color: #ffff;
+  border-radius: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.container-div :hover{
+  transform: translateY(-3px);
+  transition: width 0.3s, transform 0.3s;
+}
+
+.container-textbox{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  width: 80%;
+}
+
+#exampleEmail{
+  width: 80%;
+  height: 30px;
+  padding-left: 10px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
