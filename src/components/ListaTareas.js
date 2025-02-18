@@ -33,7 +33,8 @@ function ListaTareas() {
     };
 
     return (
-        <header className='encabezado'> hola aqui el encabezado 
+        <div class="content">
+            <header className='encabezado'> hola aqui el encabezado </header>
         <div className='container'>
             <div className='container-div'>
         <h1>Lista de Tareas</h1>
@@ -59,7 +60,7 @@ function ListaTareas() {
             value={nuevoTexto}
             onChange={e => setNuevoTexto(e.target.value)}
         />
-           <label>Descripción de la tarea:</label>
+            <label>Descripción de la tarea:</label>
             <Input
             id="exampleEmail"
             placeholder="with a placeholder"
@@ -67,7 +68,7 @@ function ListaTareas() {
             value={nuevadesc}
             onChange={e => setNuevadesc(e.target.value)}
         />
-           <label>Encargado de la tarea:</label>
+            <label>Encargado de la tarea:</label>
         <Input
             id="exampleEmail"
             placeholder="with a placeholder"
@@ -76,12 +77,13 @@ function ListaTareas() {
             onChange={e => setNuevoencargado(e.target.value)}
         />
     
-        <button onClick={agregarTarea}>Agregar Tarea</button>
         </div>
         
         </div>
-        </header>
-     
+        <button onClick={agregarTarea}>Agregar Tarea</button>
+        
+        </div>
+        
     );
 }
 
