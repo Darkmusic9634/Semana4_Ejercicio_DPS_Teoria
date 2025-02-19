@@ -1,4 +1,3 @@
-
 *{
   padding: 0px;
   margin: 0px;
@@ -6,13 +5,31 @@
 }
 
 body{
-  background-color:#DCD7C9;
+  background-color:#efeade;
 }
 
-.encabezado{
+header{
   background-color:#3F4F44;
   width: 100%;
   height: 70px;
+}
+
+.encabezado{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.encabezado h1{
+  color: white;
+}
+
+.image-task{
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
 }
 
 .container{
@@ -21,10 +38,17 @@ body{
   padding: 50px;
   gap: 30px;
   margin-top: 20px;
+
+}
+.container-items{
+  display: flex;
+  width: auto;
+  height: auto;
+  align-items: center;
 }
 
 .container-list{
-  width: 800px;
+  width: 700px;
   margin-bottom: 20px;
   display: flex;
   gap: 20px;
@@ -35,21 +59,15 @@ body{
 
 }
 
-.container-input input{
-  width: 25px;
-  height: 25px;
-}
-
 .container-div{
-  border: 1px solid #854836;
-  width: 70%;
+  min-width: 800px;
   min-height: 400px;
   gap: 20px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 0px 0px 20px;
   align-items: center;
-  background-color: #ffff;
+  background-color: #ffffff;
   border-radius: 1.5rem;
   transition: transform 0.3s ease-in-out;
 }
@@ -59,29 +77,43 @@ body{
   transition: width 0.3s, transform 0.3s;
 }
 
+.container-input input{
+  width: 25px;
+  height: 25px;
+}
+
 .container-textbox{
+  min-width: 600px;
+  padding: 0px 20px 0px 0px;
+}
+.container-textbox h4{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container-textbox div{
   display: flex;
-  align-items: center;
   flex-direction: column;
-  border: 1px solid #854836;
-  width: 80%;
+  width: 100%;
   border-radius: 30px;
-  padding: 0;
   background-color: #ffff;
   padding: 30px;
 }
 
-.container-textbox input{
+#textbox{
+  width: 96%;
+  height: 30px;
+  padding-left: 10px;
   margin: 10px ;
-    border-radius: 5px;
-    border: 1px solid #854836;
-    font-size: 15px;
-    display: flex;
-    text-align: center;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 1px solid #3F4F44;
 }
+
+
 button{
-  background-color: #FFB200;
-  border: bisque;
+  background-color: #FFCF50;
+  border: none;
   border-radius: 20px;
   font-size: 22px;
   padding: 10px;
@@ -92,26 +124,10 @@ button{
 }
 
 button:hover {
-  border:2px solid;
-  background-color: #EB5B00;
-  color: bisque;
+  background-color: #A4B465;
+  color: #FEFAE0;
 }
 
 button:active{
   transform: scale(0.9);
-}
-
-#exampleEmail{
-  width: 80%;
-  height: 30px;
-  padding-left: 10px;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Accordion } from 'reactstrap'
 
 function ItemTarea(props) {
     return (
@@ -12,8 +11,7 @@ function ItemTarea(props) {
                 <p>Encargado: {props.tarea.encargado} </p>
             </div> 
             </div> 
-            
-        
+             
     )
 }
 

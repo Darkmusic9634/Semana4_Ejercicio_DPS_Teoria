@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import ItemTarea from './ItemTarea';
 import { Input } from 'reactstrap';
@@ -23,6 +24,10 @@ function ListaTareas() {
     const [nuevadesc, setNuevadesc] = useState('');
     const [nuevoencargado, setNuevoencargado] = useState('');
 
+    const borrarTarea = (id) => {
+        setTareas(tareas.filter((tarea) => tarea.id !== id));
+      };
+
     const agregarTarea = () => {
         if (nuevoTexto.trim() !== '') {
         setTareas([...tareas, { id: tareas.length + 1, nombre: nuevoTexto, desc:nuevadesc, encargado:nuevoencargado }]);
@@ -33,44 +38,49 @@ function ListaTareas() {
     };
 
     return (
-        <header className='encabezado'> hola aqui el encabezado 
+        <header> 
+ 
+        <div className='encabezado'><h1>Gestión de tereas</h1><img className='image-task'  src="../747094-removebg-preview.png"></img>
+        </div>
         <div className='container'>
             <div className='container-div'>
-        <h1>Lista de Tareas</h1>
+                <h4>LISTA DE TAREAS</h4>
         <ul>
             {
             tareas.map(tarea => { 
             return(
+                <div className='container-items'>
                 <ItemTarea key={tarea.id} tarea={tarea}/>
-            )
-                
+                <button onClick={() => borrarTarea(tarea.id)}>✖️</button>
+                </div>
+            )     
             }
             )
             }
         </ul>
         </div>
+    
         
         <div className='container-textbox'>
+            <div>
+                <h4>Agrega una nueva tarea a la lista +</h4>
         <label>Nombre de la tarea:</label>
         <Input
-            id="exampleEmail"
-            placeholder="with a placeholder"
+            id="textbox"
             type="nombre"
             value={nuevoTexto}
             onChange={e => setNuevoTexto(e.target.value)}
         />
            <label>Descripción de la tarea:</label>
-            <Input
-            id="exampleEmail"
-            placeholder="with a placeholder"
+            <Input valid
+            id="textbox"
             type="desc"
             value={nuevadesc}
             onChange={e => setNuevadesc(e.target.value)}
         />
            <label>Encargado de la tarea:</label>
         <Input
-            id="exampleEmail"
-            placeholder="with a placeholder"
+            id="textbox"
             type="encargado"
             value={nuevoencargado}
             onChange={e => setNuevoencargado(e.target.value)}
@@ -78,7 +88,7 @@ function ListaTareas() {
     
         <button onClick={agregarTarea}>Agregar Tarea</button>
         </div>
-        
+        </div>
         </div>
         </header>
      
