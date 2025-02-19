@@ -1,3 +1,4 @@
+
 *{
   padding: 0px;
   margin: 0px;
@@ -40,6 +41,7 @@ body{
 }
 
 .container-div{
+  border: 1px solid #854836;
   width: 70%;
   min-height: 400px;
   gap: 20px;
@@ -59,9 +61,44 @@ body{
 
 .container-textbox{
   display: flex;
+  align-items: center;
   flex-direction: column;
-  border: 1px solid red;
+  border: 1px solid #854836;
   width: 80%;
+  border-radius: 30px;
+  padding: 0;
+  background-color: #ffff;
+  padding: 30px;
+}
+
+.container-textbox input{
+  margin: 10px ;
+    border-radius: 5px;
+    border: 1px solid #854836;
+    font-size: 15px;
+    display: flex;
+    text-align: center;
+}
+button{
+  background-color: #FFB200;
+  border: bisque;
+  border-radius: 20px;
+  font-size: 22px;
+  padding: 10px;
+  color: black;
+  margin: 20px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  border:2px solid;
+  background-color: #EB5B00;
+  color: bisque;
+}
+
+button:active{
+  transform: scale(0.9);
 }
 
 #exampleEmail{
